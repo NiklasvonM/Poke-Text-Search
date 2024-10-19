@@ -56,8 +56,7 @@ def clean_string_for_url(s: str) -> str:
     s = s.replace("♂", "")  # Nidoran♂
     s = s.replace("é", "%C3%A9")  # Flabébé
     s = s.replace(":", "")  # Type:_Null
-    if s.endswith("."):  # Mime Jr.
-        s = s[:-1]
+    s = s.removesuffix(".")  # Mime Jr.
     return s
 
 
